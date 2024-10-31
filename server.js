@@ -12,10 +12,15 @@ const fs = require("fs");
 const multer = require("multer");
 
 const corsOptions = {
-    origin: ["http://localhost:5174", "http://localhost:5173"],
+    origin: [
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://your-frontend.vercel.app" // Vercel da joylashgan frontend manzilingiz
+    ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 };
+
 
 const app = express();
 app.use(cors(corsOptions));
